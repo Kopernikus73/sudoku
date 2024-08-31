@@ -23,6 +23,7 @@
 3. Now you can follow the instructions in the [How to Use](#how-to-use) section
 ### Manual Download (not recommended)
 1. Install [cargo on the website for Windows](https://doc.rust-lang.org/cargo/getting-started/installation.html) or through your package manger on Linux
+    
     Don't know which package manager you use?
    1. If [neofetch](https://github.com/dylanaraps/neofetch) is installed:
     
