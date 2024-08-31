@@ -10,4 +10,4 @@ Any available Version is currently completely safe
 
 ## Reporting a Vulnerability
 
-To report any issue with the project just create an **Issue** or send an Email to [kopernikus73.github@gmail.com](kopernikus73.github@gmail.com)
+To report any issue with the project just create an **Issue** or send an Email to **kopernikus73.github@gmail.com**
