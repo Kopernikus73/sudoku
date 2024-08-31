@@ -36,7 +36,7 @@ fn main() {
                 }
             }
             "-s" => {
-               solved = false;
+                solved = false;
             }
             _ => {}
         }
@@ -105,7 +105,7 @@ fn main() {
     let mut rng = rand::thread_rng();
 
     for coord in &field {
-        let show = rng.gen_range(0..difficulty+1);
+        let show = rng.gen_range(0..difficulty + 1);
         if show == 1 {
             write!(file, " {}", coord.number).expect("Unable to write to file");
         } else {
