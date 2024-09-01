@@ -1,4 +1,4 @@
-use std::env;
+use std::{env, fs};
 use rand::Rng;
 use std::fs::File;
 use std::io::Write;
@@ -20,7 +20,7 @@ fn main() {
         match argument.as_str() {
             "-h" | "--help" => {
                 println!("\n\x1b[1m./sudoku-generator \x1b[0m\x1b[33m[-option]\x1b[0m\x1b[1m <argument>\x1b[0m    \x1b[2m(Can be empty and repeated)\x1b[0m\n");
-                println!("\x1b[33moptions\x1b[0m:\n  \x1b[33m-h\x1b[0m -> shows infos about this app\n  \x1b[33m-d\x1b[0m -> changes difficulty [1..5] std: 1 (./sudoku-generator -d 3)\n  \x1b[33m-s\x1b[0m -> show only solved sudoku (./sudoku-generator -s)\n  \x1b[33m-a\x1b[0m -> changes the amount of genrated Sudokus [1..10] std: 1 (./sudoku-generator -a 3) \x1b[2m((Creates <amount> times of files))\x1b[0m\n");
+                println!("\x1b[33moptions\x1b[0m:\n  \x1b[33m-h\x1b[0m -> shows infos about this app\n  \x1b[33m-d\x1b[0m -> changes difficulty [1..10] std: 1 (./sudoku-generator -d 3)\n  \x1b[33m-s\x1b[0m -> show only solved sudoku (./sudoku-generator -s)\n  \x1b[33m-a\x1b[0m -> changes the amount of genrated Sudokus [1..10] std: 1 (./sudoku-generator -a 3) \x1b[2m((Creates <amount> times of files))\x1b[0m\n");
 
                 std::process::exit(0);
             }
@@ -28,7 +28,7 @@ fn main() {
                 if args.len() <= index+1{
                     eprintln!("\x1b[31mmissing argument\x1b[0m");
                     std::process::exit(1);
-                }else if ["1","2","3","4","5"].contains(&&*args[index + 1]){
+                }else if ["1","2","3","4","5","6","7","8","9","10","15"].contains(&&*args[index + 1]){
                     difficulty = (&&*args[index + 1]).parse::<u8>().unwrap()
                 }else{
                     eprintln!("Wrong argument");
@@ -91,10 +91,15 @@ fn main() {
 
         let mut file_name = "sudokus/sudoku".to_string();
         for _ in 0..9{
-            file_name += format!("{}",rng.gen_range(0..=9)).as_str()
+            let added_num: u8 = rng.gen_range(0..=9);
+            file_name += format!("{}",added_num).as_str();
         }
         file_name += format!("-{}",difficulty).as_str();
 
+        match fs::create_dir_all("/sudokus") {
+            Ok(_) => {},
+            Err(_) => {},
+        }
         let mut file = File::create(file_name).expect("Unable to create file");
 
         if solved == true {

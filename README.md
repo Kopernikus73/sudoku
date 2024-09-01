@@ -6,10 +6,13 @@
 1. Generate a sudoku with standard difficulty
     
     `$ ./sudoku-generator`
-2. Generate a sudoku with changed difficulty [0..5]
+2. Generate a sudoku with changed difficulty [0..10]
 
    `$ ./sudoku-generator -d 3` (The difficulty is only relative because it is based on randomness)
-3. The generated sudokus will be in the ***./sudoku/*** directory 
+3. Generate more sudokus at a time [1..10]
+   
+   `$ ./sudoku-generator -a 3`
+4. The generated sudokus will be in the ***./sudoku/*** directory 
     
     There will be a completed version at the top and a version with missing numbers, based on the difficulty, on the bottom
     1. Remove the solved sudoku
@@ -22,7 +25,7 @@
 2. Create a folder named ***sudokus*** in the same directory the executable file is located
 3. Now you can follow the instructions in the [How to Use](#how-to-use) section
 ### Manual Download (not recommended)
-1. Install [cargo on the website for Windows](https://doc.rust-lang.org/cargo/getting-started/installation.html) or through your package manger on Linux
+1. Install [cargo on the website for Windows](https://doc.rust-lang.org/cargo/getting-started/installation.html) or through your package manager on Linux
     
     Don't know which package manager you use?
    1. If [neofetch](https://github.com/dylanaraps/neofetch) is installed:
