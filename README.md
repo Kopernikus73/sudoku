@@ -22,8 +22,7 @@
 ## Installation
 ### Executable Download
 1. Click on the Releases tab and download the system specific executable file
-2. Create a folder named ***sudokus*** in the same directory the executable file is located
-3. Now you can follow the instructions in the [How to Use](#how-to-use) section
+2. Now you can follow the instructions in the [How to Use](#how-to-use) section
 ### Manual Download (not recommended)
 1. Install [cargo on the website for Windows](https://doc.rust-lang.org/cargo/getting-started/installation.html) or through your package manager on Linux
     
