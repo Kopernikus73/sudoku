@@ -12,7 +12,11 @@
 3. Generate more sudokus at a time [1..10]
    
    `$ ./sudoku-generator -a 3`
-4. The generated sudokus will be in the ***./sudoku/*** directory 
+
+4. Generate an extra file that contains information about the sudoku
+   
+   `$ ./sudoku-generator -j`
+5. The generated sudokus will be in the ***./sudoku/*** directory 
     
     There will be a completed version at the top and a version with missing numbers, based on the difficulty, on the bottom
     1. Remove the solved sudoku
@@ -22,7 +26,8 @@
 ## Installation
 ### Executable Download
 1. Click on the Releases tab and download the system specific executable file
-2. Now you can follow the instructions in the [How to Use](#how-to-use) section
+2. (for linux) Open the terminal in the same directory as the executable and type `chmod +x ./sudoku-generator-linux-1.1.0` to give the file permission to execute
+3. Now you can follow the instructions in the [How to Use](#how-to-use) section
 ### Manual Download (not recommended)
 1. Install [cargo on the website for Windows](https://doc.rust-lang.org/cargo/getting-started/installation.html) or through your package manager on Linux
     
